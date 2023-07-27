@@ -1,0 +1,34 @@
+
+<div class="info-card">
+    <img
+      class="movieImg"
+      [src]="movieDetails?.imagesrc"
+      alt="Cover of {{ movieDetails?.name }}"
+    />
+  
+    <section class="movie-info">
+      <h2 class="movie-name">{{ movieDetails?.name }}</h2>
+  
+      <section class="info-box">
+
+        <p class="description">
+          {{ movieDetails?.description }}
+        </p>
+        <hr>
+        <p class="genre">Genre: {{ movieDetails?.genre }}</p>
+  
+        
+  
+        <!-- <p class="director">
+                  Director: {{movieDetails?.director}}
+              </p> -->
+        <!-- 
+              <p class="cast">
+                  Cast: {{movieDetails?.cast}}
+              </p> -->
+  
+        <p class="movie-rating">Rating: {{ movieDetails?.rating }}/10</p>
+      </section>
+    </section>
+  </div>
+  

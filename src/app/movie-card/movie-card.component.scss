@@ -1,0 +1,41 @@
+.cards{
+    background: var(--accent-color);
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    padding-bottom: 1px;
+    margin-right: 20px;
+    box-shadow: 0px 2px 10px 0 var(--shadow-color);
+    margin-bottom: 20px;
+
+}
+
+.card-link{
+    text-decoration: none;
+}
+
+.movieimg{
+    height: 250px;
+    width: 100%;
+    object-fit:cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.movietitle{
+    color: var(--secondary-color);
+    padding: 5px;
+    text-align: center;
+    font-size:medium;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+section.cards a {
+    padding-left: 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+section.cards a::after {
+    content: "\203A";
+    margin-left: 5px;
+  }
