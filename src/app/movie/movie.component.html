@@ -1,14 +1,15 @@
 
-<section>
+<section class="filterForm">
     <form>
-        <input type="text" placeholder="Filter">
-        <button class="primary" type="button">Search</button>
-    </form>
+        <input type="text" placeholder="Filter by name" #filter>
+        <button class="primary" type="button" (click)="filterResults(filter.value)">Filter</button>
+    </form>    
+
 </section>
 
 <section class="DefaultCards" >
     <app-movie-card
-        *ngFor="let movieDetails of movieDetailsList"
+        *ngFor="let movieDetails of filteredList"
         [movieDetails]="movieDetails" 
         (click)="open(movieDetails)">
         

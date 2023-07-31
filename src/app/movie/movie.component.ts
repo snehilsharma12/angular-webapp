@@ -21,6 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 })
 export class MovieComponent {
   movieDetailsList: MovieDetails[] = [];
+  filteredList: MovieDetails[] = [];
+  filter: string | undefined;
 
   constructor(public moviesService: MoviesService, public dialog: MatDialog) {
     this.getMovieData();
@@ -29,6 +31,7 @@ export class MovieComponent {
   async getMovieData(): Promise<void> {
     if (this.movieDetailsList.length == 0) {
       this.movieDetailsList = await this.moviesService.getAllMovies();
+      this.filteredList = this.movieDetailsList;
     }
   }
 
@@ -38,5 +41,15 @@ export class MovieComponent {
       width: 'max-content',
       panelClass: 'custom-container',
     });
+  }
+
+  filterResults(text: string) {
+    if (!text) {
+      this.filteredList = this.movieDetailsList;
+    }
+
+    this.filteredList = this.movieDetailsList.filter((movieDetails) =>
+      movieDetails?.name.toLowerCase().includes(text.toLowerCase())
+    );
   }
 }
