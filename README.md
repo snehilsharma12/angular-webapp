@@ -8,4 +8,4 @@ o Utilizes angular material library to create a uniform UI experience. <br>
 o Application is styled using SCSS framework and CSS variables. <br>
 
 # Screenshots
-![screenshot1][./screenshot1.png]
+![screenshot1][/screenshot1.png]
